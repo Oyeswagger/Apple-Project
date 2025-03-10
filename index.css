@@ -1,0 +1,928 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Netflix Sans light';
+}
+
+.navbar {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	height: 50px;
+	position: fixed;
+	top: 0;
+	z-index: 99;
+	justify-content: center;
+	align-items: center;
+	background-color: rgb(255, 255, 255);
+	gap: 30px;
+}
+.navbar h5 {
+	color: #2d2d2d;
+}
+
+.store-blur,
+.mac-blur,
+.ipad-blur,
+.iphone-blur,
+.watch-blur,
+.vision-blur,
+.airpods-blur,
+.tv-home-blur,
+.entertainment-blur,
+.accessories-blur,
+.support-blur {
+	width: 100%;
+	height: 100vh;
+	position: absolute;
+	top: 50px;
+	left: 0;
+	backdrop-filter: blur(40px);
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 0.3s ease, visibility 0.3s ease-out;
+}
+
+.store-list,
+.mac-list,
+.ipad-list,
+.iphone-list,
+.watch-list,
+.vision-list,
+.airpods-list,
+.tv-home-list,
+.entertainment-list,
+.accessories-list,
+.support-list {
+	display: flex;
+	width: 100%;
+	background-color: white;
+}
+.store-list,
+.iphone-list {
+	height: 400px;
+}
+.watch-list,
+.accessories-list {
+	height: 450px;
+}
+.vision-list {
+	height: 230px;
+}
+.airpods-list {
+	height: 330px;
+}
+.tv-home-list {
+	height: 360px;
+}
+.mac-list,
+.ipad-list,
+.support-list {
+	height: 500px;
+}
+
+.entertainment-list {
+	height: 550px;
+}
+
+.store-cont,
+.mac-cont,
+.ipad-cont,
+.iphone-cont,
+.watch-cont,
+.vision-cont,
+.airpods-cont,
+.tv-home-cont,
+.entertainment-cont,
+.accessories-cont,
+.support-cont {
+	width: 80%;
+	display: flex;
+	position: absolute;
+	top: 10px;
+	left: 0;
+	gap: 100px;
+	justify-content: center;
+	padding: 10px;
+}
+.store-cont h2,
+.mac-cont h2,
+.ipad-cont h2,
+.iphone-cont h2,
+.watch-cont h2,
+.vision-cont h2,
+.airpods-cont h2,
+.tv-home-cont h2,
+.entertainment-cont h2,
+.accessories-cont h2,
+.support-cont h2 {
+	color: black;
+	font-size: 25px;
+	padding: 5px 0;
+}
+
+.store-cont p,
+.mac-cont p,
+.ipad-cont p,
+.iphone-cont p,
+.watch-cont p,
+.vision-cont p,
+.airpods-cont p,
+.tv-home-cont p,
+.entertainment-cont p,
+.accessories-cont p,
+.support-cont p {
+	color: #5f5f5f;
+	padding: 5px 0;
+	font-size: 13px;
+}
+
+.store-side,
+.mac-side,
+.ipad-side,
+.iphone-side,
+.watch-side,
+.vision-side,
+.airpods-side,
+.tv-home-side,
+.entertainment-side,
+.accessories-side,
+.support-side {
+	width: 350px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.store-side h4,
+.mac-side h4,
+.ipad-side h4,
+.iphone-side h4,
+.watch-side h4,
+.vision-side h4,
+.airpods-side h4,
+.tv-home-side,
+.entertainment-side h4,
+.accessories-side h4,
+.support-side h4,
+.mac-cont h4,
+.ipad-cont h4,
+.iphone-cont h4,
+.watch-cont h4,
+.vision-cont h4,
+.airpods-cont h4,
+.tv-home-cont h4,
+.entertainment-cont h4,
+.accessories-cont h4,
+.support-cont h4 {
+	color: #353535;
+	padding: 5px 0;
+}
+
+.mac-cont > div > a:nth-of-type(9) h4,
+.ipad-cont > div > a:nth-of-type(8) h4,
+.iphone-cont > div > a:nth-of-type(6) h4,
+.vision-cont > div > a:nth-of-type(2) h4,
+.airpods-cont > div > a:nth-of-type(1) h4,
+.support-cont > div > a:nth-of-type(9) h4 {
+	padding-top: 20px;
+}
+
+#store:hover ~ .store-blur,
+.store-blur:hover,
+#mac:hover ~ .mac-blur,
+.mac-blur:hover,
+#ipad:hover ~ .ipad-blur,
+.ipad-blur:hover,
+#iphone:hover ~ .iphone-blur,
+.iphone-blur:hover,
+#watch:hover ~ .watch-blur,
+.watch-blur:hover,
+#vision:hover ~ .vision-blur,
+.vision-blur:hover,
+#airpods:hover ~ .airpods-blur,
+.airpods-blur:hover,
+#tv-home:hover ~ .tv-home-blur,
+.tv-home-blur:hover,
+#entertainment:hover ~ .entertainment-blur,
+.entertainment-blur:hover,
+#accessories:hover ~ .accessories-blur,
+.accessories-blur:hover,
+#support:hover ~ .support-blur,
+.store-blur:hover {
+	visibility: visible;
+	opacity: 1;
+}
+
+div a {
+	text-decoration: none;
+	color: #5f5f5f;
+	font-size: 13px;
+	font-weight: 100;
+	font-family: 'Netflix Sans light';
+}
+
+section {
+	width: 100%;
+	overflow: hidden;
+	height: 1260px;
+}
+
+main {
+	background-color: #f5f5f7;
+	width: 100%;
+}
+
+sup {
+	font-size: 11px;
+	font-weight: 900;
+}
+
+.iphone-pro a img,
+.iphone a img {
+	width: 100%;
+	height: 630px;
+	position: relative;
+}
+
+.section-top,
+.section-down {
+	color: white;
+}
+
+.section-top h2,
+.section-down h2 {
+	font-size: 55px;
+	font-weight: 500;
+}
+
+.section-top p,
+.section-down p {
+	font-size: 25px;
+	font-weight: 400;
+}
+.section-top h2,
+.section-down h2,
+.section-top p,
+.section-down p {
+	font-family: 'Netflix Sans';
+	text-align: center;
+}
+
+.section-top,
+.section-down {
+	position: absolute;
+	top: 80px;
+	left: 37%;
+	width: auto;
+	text-align: center;
+}
+
+.iphone-pro .button {
+	width: auto;
+	height: auto;
+	position: absolute;
+	top: 210px;
+	left: 41%;
+	text-align: center;
+}
+
+.button a:nth-child(1) {
+	width: 200px;
+	height: 60px;
+	background-color: #0071e3;
+	border-radius: 25px;
+	font-size: 18px;
+	color: white;
+	padding: 10px 22px;
+}
+
+.button a:nth-child(2) {
+	width: 100px;
+	height: 60px;
+	background-color: transparent;
+	border: 1px solid #2c78c5;
+	font-size: 18px;
+	color: #2997ff;
+	border-radius: 25px;
+	padding: 10px 22px;
+	margin-left: 10px;
+}
+
+.button a:nth-child(2):hover {
+	background-color: #2997ff;
+	color: white;
+}
+
+.iphone a img {
+	position: relative;
+}
+
+.section-down {
+	position: absolute;
+	top: 680px;
+	left: 42%;
+}
+
+.iphone .button-down {
+	width: auto;
+	height: auto;
+	position: absolute;
+	top: 810px;
+	left: 44%;
+	text-align: center;
+}
+
+.button-down a:nth-child(1) {
+	width: 200px;
+	height: 60px;
+	background-color: white;
+	border-radius: 25px;
+	font-size: 18px;
+	color: black;
+	padding: 10px 22px;
+}
+
+.button-down a:nth-child(2) {
+	width: 100px;
+	height: 60px;
+	background-color: transparent;
+	border: 1px solid white;
+	font-size: 18px;
+	color: white;
+	border-radius: 25px;
+	padding: 10px 22px;
+	margin-left: 10px;
+}
+.button-down a:nth-child(2):hover {
+	background-color: white;
+	color: black;
+}
+
+.section-two {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 100%;
+	height: auto;
+	gap: 10px;
+	background-color: #ffffff;
+	padding: 10px;
+}
+
+.section-two .watch a img,
+.section-two .ipad a img,
+.section-two .macbook a img,
+.section-two .airpods a img,
+.section-two .trade-in a img,
+.section-two .card a img {
+	height: 600px;
+	width: 730px;
+}
+
+.watch-inside img,
+.trade-in-inside img,
+.card-inside img {
+	height: 30px;
+	width: 25px;
+}
+
+.watch-inside div,
+.trade-in-inside div,
+.card-inside div {
+	display: flex;
+	font-family: 'Netflix Sans';
+	font-size: 23px;
+	align-items: center;
+	gap: 5px;
+	justify-content: center;
+}
+
+.ipad-inside h2,
+.macbook-inside h2,
+.airpods-inside {
+	font-size: 20px;
+	font-family: 'Netflix Sans';
+}
+
+.watch-inside h4,
+.watch-inside p,
+.trade-in-inside h4,
+.trade-in-inside p,
+.card-inside h4,
+.card-inside p {
+	display: flex;
+	justify-content: center;
+}
+
+.watch-inside p,
+.trade-in-inside p,
+.card-inside p {
+	font-size: 20px;
+	text-align: center;
+}
+
+.section-two h2 {
+	text-align: center;
+	font-size: 35px;
+	font-weight: 500;
+	font-family: 'Netflix Sans';
+}
+
+.section-two p {
+	text-align: center;
+	font-size: 20px;
+	font-weight: 500;
+}
+
+.watch {
+	position: relative;
+}
+
+.watch-inside {
+	position: absolute;
+	left: 300px;
+	top: 50px;
+}
+
+.watch-button {
+	position: absolute;
+	left: 290px;
+	top: 180px;
+}
+
+.watch-button a:nth-child(1) {
+	width: 120px;
+	height: 40px;
+	background-color: #0071e3;
+	border-radius: 25px;
+	font-size: 15px;
+	color: white;
+	padding: 8px 15px;
+}
+
+.watch-button a:nth-child(2) {
+	width: 80px;
+	height: 40px;
+	background-color: transparent;
+	border: 1px solid #0071e3;
+	font-size: 15px;
+	color: #0071e3;
+	border-radius: 25px;
+	padding: 8px 15px;
+	margin-left: 10px;
+}
+.watch-button a:nth-child(2):hover {
+	background-color: #0071e3;
+	color: white;
+}
+.ipad {
+	position: relative;
+}
+.ipad-inside {
+	position: absolute;
+	top: 70px;
+	left: 200px;
+	color: #f5f5f7;
+}
+
+.ipad-button {
+	position: absolute;
+	left: 290px;
+	top: 170px;
+}
+
+.apple-int {
+	position: absolute;
+	bottom: 60px;
+	left: 290px;
+	font-size: 15px !important;
+	background: linear-gradient(to right, #3683f9, #ee4376);
+	background-clip: border-box;
+	-webkit-background-clip: text;
+	color: transparent;
+}
+
+.ipad-button a:nth-child(1) {
+	width: 120px;
+	height: 40px;
+	background-color: #0071e3;
+	border-radius: 25px;
+	font-size: 15px;
+	color: white;
+	padding: 8px 15px;
+}
+
+.ipad-button a:nth-child(2) {
+	width: 80px;
+	height: 40px;
+	background-color: transparent;
+	border: 1px solid #0071e3;
+	font-size: 15px;
+	color: #0071e3;
+	border-radius: 25px;
+	padding: 8px 15px;
+	margin-left: 10px;
+}
+.ipad-button a:nth-child(2):hover {
+	background-color: #0071e3;
+	color: white;
+}
+.macbook {
+	position: relative;
+}
+
+.macbook-inside {
+	position: absolute;
+	top: 60px;
+	left: 280px;
+}
+.macbook-button {
+	position: absolute;
+	top: 150px;
+	left: 310px;
+}
+
+.macbook-button a:nth-child(1) {
+	width: 120px;
+	height: 40px;
+	background-color: #0071e3;
+	border-radius: 25px;
+	font-size: 15px;
+	color: white;
+	padding: 8px 15px;
+}
+
+.macbook-button a:nth-child(2) {
+	width: 80px;
+	height: 40px;
+	background-color: transparent;
+	border: 1px solid #0071e3;
+	font-size: 15px;
+	color: #0071e3;
+	border-radius: 25px;
+	padding: 8px 15px;
+	margin-left: 10px;
+}
+.macbook-button a:nth-child(2):hover,
+.airpods-button a:nth-child(2):hover,
+.card-button a:nth-child(2):hover {
+	background-color: #0071e3;
+	color: white;
+}
+
+.airpods {
+	position: relative;
+}
+
+.airpods-inside {
+	position: absolute;
+	bottom: 120px;
+	left: 250px;
+	color: #f5f5f7;
+}
+
+.airpods-button {
+	position: absolute;
+	bottom: 70px;
+	left: 320px;
+}
+
+.airpods-button a:nth-child(1) {
+	width: 120px;
+	height: 40px;
+	background-color: #0071e3;
+	border-radius: 25px;
+	font-size: 15px;
+	color: white;
+	padding: 8px 15px;
+}
+
+.airpods-button a:nth-child(2) {
+	width: 80px;
+	height: 40px;
+	background-color: transparent;
+	border: 1px solid #0071e3;
+	font-size: 15px;
+	color: #0071e3;
+	border-radius: 25px;
+	padding: 8px 15px;
+	margin-left: 10px;
+}
+
+.trade-in {
+	position: relative;
+}
+
+.trade-in-inside {
+	position: absolute;
+	top: 60px;
+	left: 230px;
+}
+
+.trade-in-button {
+	position: absolute;
+	top: 180px;
+	left: 310px;
+}
+
+.trade-in-button a {
+	width: 120px;
+	height: 40px;
+	background-color: #0071e3;
+	border-radius: 25px;
+	font-size: 15px;
+	color: white;
+	padding: 8px 15px;
+}
+
+.card {
+	position: relative;
+}
+
+.card-inside {
+	position: absolute;
+	top: 60px;
+	left: 250px;
+}
+
+.card-button {
+	position: absolute;
+	top: 180px;
+	left: 280px;
+}
+
+.card-button a:nth-child(1) {
+	width: 120px;
+	height: 40px;
+	background-color: #0071e3;
+	border-radius: 25px;
+	font-size: 15px;
+	color: white;
+	padding: 8px 15px;
+}
+
+.card-button a:nth-child(2) {
+	width: 80px;
+	height: 40px;
+	background-color: transparent;
+	border: 1px solid #0071e3;
+	font-size: 15px;
+	color: #0071e3;
+	border-radius: 25px;
+	padding: 8px 15px;
+	margin-left: 10px;
+}
+
+.section-three {
+	background-color: white;
+	width: auto;
+	height: 700px;
+}
+
+.slide img {
+	height: 650px;
+}
+.carousel {
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+}
+.slides {
+	width: 100%;
+	display: flex;
+	gap: 10px;
+	animation: slide 60s infinite;
+}
+
+.slide {
+	width: 100%;
+	height: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@keyframes slide {
+	0%,
+	10% {
+		transform: translateX(0%);
+	}
+	11%,
+	20% {
+		transform: translateX(-65%);
+	}
+	21%,
+	30% {
+		transform: translateX(-140%);
+	}
+	31%,
+	40% {
+		transform: translateX(-220%);
+	}
+	41%,
+	50% {
+		transform: translateX(-295%);
+	}
+	51%,
+	60% {
+		transform: translateX(-370%);
+	}
+	61%,
+	70% {
+		transform: translateX(-450%);
+	}
+	71%,
+	80% {
+		transform: translateX(-525%);
+	}
+	81%,
+	90% {
+		transform: translateX(-600%);
+	}
+	91%,
+	100% {
+		transform: translateX(-665%);
+	}
+}
+
+.control {
+	width: 100%;
+	height: 30px;
+	display: flex;
+	gap: 15px;
+	justify-content: center;
+	align-items: center;
+}
+
+.radio {
+	background-color: #949494;
+	height: 8px;
+	width: 8px;
+	border-radius: 50%;
+}
+
+.radio:hover {
+	background-color: black;
+	cursor: pointer;
+}
+
+.section-four {
+	width: 100%;
+	height: 300px;
+	background-color: #ffffff;
+}
+
+.carousel-two {
+	width: 100%;
+	height: 250px;
+	overflow: hidden;
+}
+
+.moves {
+	width: 100%;
+	height: auto;
+	display: flex;
+	gap: 10px;
+	animation: move 60s infinite linear;
+}
+
+@keyframes move {
+	0% {
+		transform: translateX(0%);
+	}
+	15% {
+		transform: translateX(-15%);
+	}
+	30% {
+		transform: translateX(-30%);
+	}
+	45% {
+		transform: translateX(-45%);
+	}
+	60% {
+		transform: translateX(-60%);
+	}
+	75% {
+		transform: translateX(-75%);
+	}
+	90% {
+		transform: translateX(-90%);
+	}
+	105% {
+		transform: translateX(-105%);
+	}
+}
+
+.move img {
+	width: 400px;
+	height: 230px;
+}
+
+.move {
+	display: flex;
+	width: 700px;
+	height: auto;
+	background-color: #5f5f5f;
+}
+
+footer {
+	background-color: #f5f5f7;
+	height: 150vh;
+	width: 100%;
+}
+
+.top-footer {
+	width: 65%;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	padding: 20px 10px;
+	height: auto;
+	margin: auto;
+}
+
+.top-footer p {
+	color: #7c7c7d;
+	font-size: 12px;
+}
+.top-footer a {
+	text-decoration: underline;
+}
+
+.bottom-footer {
+	width: 65%;
+	padding: 10px 10px;
+	height: auto;
+	margin: auto;
+}
+.category {
+	width: 100%;
+	height: 440px;
+	font-size: 12px;
+	display: flex;
+	gap: 15px;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+
+.edu {
+	padding-top: 20px;
+}
+hr {
+	background-color: #cececf;
+	border: none;
+	height: 1px;
+}
+
+.category div p {
+	width: 180px;
+	gap: 30px;
+	padding: 5px 0;
+}
+.category h4 {
+	color: #353535;
+}
+.category a {
+	color: #7c7c7d;
+}
+.category a:hover {
+	text-decoration: underline;
+}
+.more {
+	font-size: 12px;
+	padding: 25px 0;
+	color: #7c7c7d;
+}
+
+.more a {
+	color: #0071e3;
+	text-decoration: underline;
+}
+.foot {
+	display: flex;
+	height: 30px;
+	align-items: center;
+	color: #7c7c7d;
+	font-size: 12px;
+	/* gap: 30px; */
+	justify-content: space-between;
+}
+
+.foot-mid a {
+	font-size: 12px;
+	padding: 0 10px;
+}
+.privacy {
+	display: flex;
+	text-align: right;
+	justify-content: space-between;
+	width: 70%;
+}
+
+.privacy a:hover {
+	text-decoration: underline;
+}
+.united {
+	font-size: 12px;
+}
